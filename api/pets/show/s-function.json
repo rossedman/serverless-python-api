@@ -1,5 +1,5 @@
 {
-  "name": "pets-show",
+  "name": "show",
   "runtime": "python2.7",
   "description": "Serverless Lambda function for project: pets-api",
   "customName": false,

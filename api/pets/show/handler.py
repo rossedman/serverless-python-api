@@ -10,7 +10,7 @@ table = dynamodb.Table('pets')
 def handler(event, context):
     response = table.get_item(
         Key={
-            'Id': int(event["id"])
+            'uuid': str(event["id"])
         }
     )
 

@@ -1,5 +1,5 @@
 {
-  "name": "pets-create",
+  "name": "create",
   "runtime": "python2.7",
   "description": "Serverless Lambda function for project: pets-api",
   "customName": false,
@@ -21,7 +21,7 @@
       "apiKeyRequired": false,
       "requestParameters": {},
       "requestTemplates": {
-        "application/json": "{\"id\": \"$input.params('id')\", \"name\": \"$input.params('name')\", \"breed\": \"$input.params('breed')\"}"
+        "application/json": "{\"body\": \"$input.body\"}"
       },
       "responses": {
         "400": {

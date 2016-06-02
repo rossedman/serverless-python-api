@@ -56,13 +56,13 @@
       "Properties": {
         "AttributeDefinitions": [
           {
-            "AttributeName": "Id",
-            "AttributeType": "N"
+            "AttributeName": "uuid",
+            "AttributeType": "S"
           }
         ],
         "KeySchema": [
           {
-            "AttributeName": "Id",
+            "AttributeName": "uuid",
             "KeyType": "HASH"
           }
         ],
