@@ -36,9 +36,11 @@
               "Action": [
                 "logs:CreateLogGroup",
                 "logs:CreateLogStream",
-                "logs:PutLogEvents"
+                "logs:PutLogEvents",
+                "s3:*",
+                "dynamodb:*"
               ],
-              "Resource": "arn:aws:logs:${region}:*:*"
+              "Resource": "*"
             }
           ]
         },
@@ -47,6 +49,28 @@
             "Ref": "IamRoleLambda"
           }
         ]
+      }
+    },
+    "DynamoDBTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "Id",
+            "AttributeType": "N"
+          }
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "Id",
+            "KeyType": "HASH"
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        },
+        "TableName": "pets"
       }
     }
   },

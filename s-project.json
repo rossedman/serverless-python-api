@@ -1,5 +1,5 @@
 {
-  "name": "serverless-starter",
+  "name": "pets-api",
   "custom": {},
   "plugins": [
     "serverless-optimizer-plugin"

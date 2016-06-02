@@ -1,10 +1,10 @@
 {
-  "name": "decrypt",
-  "runtime": "nodejs4.3",
-  "description": "Serverless Lambda function for project: serverless-starter",
+  "name": "pets-show",
+  "runtime": "python2.7",
+  "description": "Serverless Lambda function for project: pets-api",
   "customName": false,
   "customRole": false,
-  "handler": "api/password/decrypt/handler.handler",
+  "handler": "handler.handler",
   "timeout": 6,
   "memorySize": 256,
   "authorizer": {},
@@ -13,7 +13,7 @@
   },
   "endpoints": [
     {
-      "path": "password/decrypt",
+      "path": "pets/{id}",
       "method": "GET",
       "type": "AWS",
       "authorizationType": "none",
@@ -21,9 +21,7 @@
       "apiKeyRequired": false,
       "requestParameters": {},
       "requestTemplates": {
-        "application/json": {
-          "password": "$input.params('password')"
-        }
+        "application/json": "{\"id\": \"$input.params('id')\"}"
       },
       "responses": {
         "400": {

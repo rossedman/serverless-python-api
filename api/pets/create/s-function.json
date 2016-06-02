@@ -1,12 +1,12 @@
 {
-  "name": "pets",
-  "runtime": "nodejs4.3",
-  "description": "Serverless Lambda function for project: serverless-starter",
+  "name": "pets-create",
+  "runtime": "python2.7",
+  "description": "Serverless Lambda function for project: pets-api",
   "customName": false,
   "customRole": false,
   "handler": "handler.handler",
   "timeout": 6,
-  "memorySize": 1024,
+  "memorySize": 256,
   "authorizer": {},
   "custom": {
     "excludePatterns": []
@@ -14,14 +14,14 @@
   "endpoints": [
     {
       "path": "pets",
-      "method": "GET",
+      "method": "POST",
       "type": "AWS",
       "authorizationType": "none",
       "authorizerFunction": false,
       "apiKeyRequired": false,
       "requestParameters": {},
       "requestTemplates": {
-        "application/json": ""
+        "application/json": "{\"id\": \"$input.params('id')\", \"name\": \"$input.params('name')\", \"breed\": \"$input.params('breed')\"}"
       },
       "responses": {
         "400": {

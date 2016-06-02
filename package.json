@@ -17,7 +17,7 @@
   "devDependencies": {},
   "homepage": "https://github.com/serverless/serverless-starter#readme",
   "license": "MIT",
-  "name": "serverless-starter",
+  "name": "pets-api",
   "optionalDependencies": {},
   "private": false,
   "repository": {
