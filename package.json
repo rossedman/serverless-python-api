@@ -10,6 +10,7 @@
     "url": "https://github.com/serverless/serverless-starter/issues"
   },
   "dependencies": {
+    "aws-sdk": "^2.3.16",
     "serverless-optimizer-plugin": "^2.0.0"
   },
   "description": "A bare bones Serverless Framework project with examples for common use cases.",
