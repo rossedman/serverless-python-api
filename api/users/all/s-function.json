@@ -4,9 +4,9 @@
   "description": "Serverless Lambda function for project: demo-api",
   "customName": false,
   "customRole": false,
-  "handler": "handler.handler",
-  "timeout": 6,
-  "memorySize": 1024,
+  "handler": "api/users/all/handler.handler",
+  "timeout": 3,
+  "memorySize": 128,
   "authorizer": {},
   "custom": {
     "excludePatterns": []

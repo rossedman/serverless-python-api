@@ -6,7 +6,13 @@
       "queryParams": "$input.params().querystring",
       "headerParams": "$input.params().header",
       "headerParamNames": "$input.params().header.keySet()",
+      "pathParams": "$input.params().path",
       "contentTypeValue": "$input.params().header.get('Content-Type')"
+    }
+  },
+  "apiErrorResponseTemplate": {
+    "application/json": {
+      "message": "$input.path('$.errorMessage')"
     }
   }
 }

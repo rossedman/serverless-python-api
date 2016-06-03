@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "aws-sdk": "^2.3.16",
     "serverless-optimizer-plugin": "^2.0.0"
   },
   "description": "Simple python api example",

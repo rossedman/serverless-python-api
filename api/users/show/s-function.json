@@ -4,9 +4,9 @@
   "description": "Serverless Lambda function for project: pets-api",
   "customName": false,
   "customRole": false,
-  "handler": "handler.handler",
-  "timeout": 6,
-  "memorySize": 256,
+  "handler": "api/users/show/handler.handler",
+  "timeout": 3,
+  "memorySize": 128,
   "authorizer": {},
   "custom": {
     "excludePatterns": []
@@ -20,11 +20,11 @@
       "authorizerFunction": false,
       "apiKeyRequired": false,
       "requestParameters": {},
-      "requestTemplates": {
-        "application/json": "{\"uuid\": \"$input.params('uuid')\"}"
-      },
+      "requestTemplates": "$${apiRequestTemplate}",
       "responses": {
         "400": {
+          "responseTemplates": "$${apiErrorResponseTemplate}",
+          "selectionPattern": "^\\[BadRequest\\].*",
           "statusCode": "400"
         },
         "default": {

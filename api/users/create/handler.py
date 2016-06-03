@@ -1,12 +1,14 @@
 from __future__ import print_function
 
-import boto3
-import json
-import logging
-import uuid
+import os, sys, uuid, json
 
-dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table('users')
+here = os.path.dirname(os.path.realpath(__file__))
+sys.path.append(os.path.join(here, "../../"))
+sys.path.append(os.path.join(here, "../../vendored"))
+
+import lib
+
+table = lib.users_table()
 
 def handler(event, context):
 
