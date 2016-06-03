@@ -5,13 +5,13 @@ import json
 import logging
 
 dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table('pets')
+table = dynamodb.Table('users')
 
 def handler(event, context):
-    
+
     response = table.get_item(
         Key={
-            'uuid': str(event["id"])
+            'uuid': str(event["body"]["uuid"])
         }
     )
 

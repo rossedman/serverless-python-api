@@ -7,7 +7,7 @@ import logging
 log = logging.getLogger()
 
 dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table('pets')
+table = dynamodb.Table('users')
 
 def handler(event, context):
 
@@ -26,4 +26,4 @@ def handler(event, context):
             }
         )
 
-    return {message: "Records added!"}
+    return json.dumps({'message': "Records added!"})

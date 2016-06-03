@@ -1,28 +1,26 @@
 {
-  "name": "show",
+  "name": "create",
   "runtime": "python2.7",
-  "description": "Serverless Lambda function for project: pets-api",
+  "description": "Serverless Lambda function for project: demo-api",
   "customName": false,
   "customRole": false,
   "handler": "handler.handler",
-  "timeout": 6,
-  "memorySize": 256,
+  "timeout": 3,
+  "memorySize": 128,
   "authorizer": {},
   "custom": {
     "excludePatterns": []
   },
   "endpoints": [
     {
-      "path": "pets/{id}",
-      "method": "GET",
+      "path": "users",
+      "method": "POST",
       "type": "AWS",
       "authorizationType": "none",
       "authorizerFunction": false,
       "apiKeyRequired": false,
       "requestParameters": {},
-      "requestTemplates": {
-        "application/json": "{\"id\": \"$input.params('id')\"}"
-      },
+      "requestTemplates": "$${apiRequestTemplate}",
       "responses": {
         "400": {
           "statusCode": "400"

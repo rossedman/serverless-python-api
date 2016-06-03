@@ -1,19 +1,19 @@
 {
   "name": "batch",
   "runtime": "python2.7",
-  "description": "Serverless Lambda function for project: pets-api",
+  "description": "Serverless Lambda function for project: demo-api",
   "customName": false,
   "customRole": false,
   "handler": "handler.handler",
-  "timeout": 6,
-  "memorySize": 1024,
+  "timeout": 3,
+  "memorySize": 128,
   "authorizer": {},
   "custom": {
     "excludePatterns": []
   },
   "endpoints": [
     {
-      "path": "pets/batch",
+      "path": "users/batch",
       "method": "POST",
       "type": "AWS",
       "authorizationType": "none",

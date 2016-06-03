@@ -70,7 +70,7 @@
           "ReadCapacityUnits": 5,
           "WriteCapacityUnits": 5
         },
-        "TableName": "pets"
+        "TableName": "users"
       }
     }
   },

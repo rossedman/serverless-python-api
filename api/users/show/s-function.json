@@ -1,19 +1,19 @@
 {
-  "name": "all",
+  "name": "show",
   "runtime": "python2.7",
   "description": "Serverless Lambda function for project: pets-api",
   "customName": false,
   "customRole": false,
   "handler": "handler.handler",
   "timeout": 6,
-  "memorySize": 1024,
+  "memorySize": 256,
   "authorizer": {},
   "custom": {
     "excludePatterns": []
   },
   "endpoints": [
     {
-      "path": "pets",
+      "path": "users/{uuid}",
       "method": "GET",
       "type": "AWS",
       "authorizationType": "none",
@@ -21,7 +21,7 @@
       "apiKeyRequired": false,
       "requestParameters": {},
       "requestTemplates": {
-        "application/json": ""
+        "application/json": "{\"uuid\": \"$input.params('uuid')\"}"
       },
       "responses": {
         "400": {

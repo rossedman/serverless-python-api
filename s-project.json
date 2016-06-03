@@ -1,12 +1,12 @@
 {
-  "name": "pets-api",
+  "name": "demo-api",
   "custom": {},
   "plugins": [
     "serverless-optimizer-plugin"
   ],
-  "version": "0.2.0",
+  "version": "0.1.0",
   "profile": "serverless-v0.5.0",
-  "location": "https://github.com/...",
-  "author": "serverless.com",
-  "description": "A bare bones Serverless Framework project with examples for common use cases."
+  "location": "https://github.com/rossedman/serverless-starter",
+  "author": "Ross Edman",
+  "description": "Simple python API for demo purposes."
 }

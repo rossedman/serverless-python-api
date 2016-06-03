@@ -8,7 +8,7 @@ from boto3.dynamodb.conditions import Key, Attr
 log = logging.getLogger()
 
 dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table('pets')
+table = dynamodb.Table('users')
 
 def handler(event, context):
 
